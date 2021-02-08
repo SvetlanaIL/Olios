@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 90%;
   height: 100vh;
-  background: url("../../images/main_background.png") center/cover no-repeat;
+  background: url("../images/main_background.png") center/cover no-repeat;
 }
 
 .header__main-row {
@@ -210,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 87px;
   height: 87px;
   margin: 20px 0 0 0;
-  background: url("../../images/hamb-open.png") center/cover no-repeat;
+  background: url("../images/hamb-open.png") center/cover no-repeat;
   background-size: 30%;
 }
 .header__menu .header__hamb button:hover {
@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header__hamb.active button {
-  background: url("../../images/hamb-close.png") center/cover no-repeat;
+  background: url("../images/hamb-close.png") center/cover no-repeat;
   background-size: 20%;
 }
 
