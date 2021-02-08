@@ -1,0 +1,207 @@
+/*<МИКСИНЫ>======================================================================================================================================================================================================*/
+@import "mixins.scss";
+
+/*<Подключаем шрифты>==============================================================================================================================================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+/*<Шрифт по умолчанию>=================================================================================================================================================================================================*/
+$fontfamily: 'Lato', sans-serif;
+
+/*<ПЕРЕМЕННЫЕ>==================================================================================================================================================================================================================*/
+$color_1: #fff;
+$color_2: #000;
+
+
+/*<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>======================================================================================================================================================================================================*/
+@import "null.scss";
+
+/*<ОБОЛОЧКА>==================================================================================================================================================================================================================*/
+.wrapper{
+	overflow: hidden;
+	min-height: 100%;
+
+}
+
+/*<ОСНОВНАЯ СЕТКА>==================================================================================================================================================================================================================*/
+.container {
+	width: 1200px;
+	// padding: 0px 25px;
+	margin: 0px auto;
+}
+
+/*<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================*/
+@import "ui.scss";
+
+
+/*<ОСНОВНОЙ БЛОК>===========================================================================================================================================================================================================*/
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	@include flexbox();
+	flex-direction: column;
+}
+// .main-screen {
+// 	flex: 1 0 100%;
+// 	position: relative;
+// 	/* .main-screen__bg*/
+// 	&__bg {
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 100%;
+// 		top: 0;
+// 		left: 0;
+// 	}
+// }
+
+
+.header__row {
+	@include flexbox();
+	flex-direction: row;
+}
+
+.header__left {
+	width: 10%;
+	height: 100vh;
+	background-color: #fff;
+	@include flexbox();
+	flex-direction: column;
+	align-items:center;
+		.left__header-logo {
+			margin: 20px 0 140px 0;
+		}
+}
+
+.left__header-icons {
+	@include flexbox();
+	flex-direction: column;
+		img {
+			margin: 0 0 40px 0;
+		}
+}
+
+.header__main {
+	position: relative;
+	width: 90%;
+	height: 100vh;
+	background: url('../../images/main_background.png') center / cover no-repeat;
+}
+
+.header__main-row {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.header__text {
+	line-height: 1.2;
+	margin: 50px auto;
+	padding: 0 0 0 240px;
+	@include flexbox();
+	flex-direction: column;
+	align-items: center;
+		.text__h1 {
+			font-size: 170pt;
+			font-weight: 100;
+		}
+		.text__h2 {
+			font-size: 26pt;
+		}
+		.header__button {
+			margin: 25px auto;
+			@include flexbox();
+			justify-content: center;
+			align-items: center;
+			background-color: rgb(0, 35, 255);
+			width: 215px;
+			height: 54px;
+			border-radius: 50px;
+				a {
+					text-align: center;
+					color: $color_1;
+				}
+		}
+}
+
+.header__button:hover {
+	background-color: rgb(0, 35, 255);
+	box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+}
+
+.header__right {
+	width: 15%;
+	height: 100vh;
+	transition: 0.5s ease 0s;
+}
+
+.header__right.active {
+	background-color: #fff;
+	transition: 0.5s ease 0s;
+}
+
+.header__menu {
+	margin: 0 auto;
+	width: 80%;
+	@include flexbox();
+	flex-direction: column;
+		.header__hamb {
+			margin: 0 auto;
+			button {
+				border-radius: 50%;
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 0px 25px 0px rgba(219, 219, 219);
+				width: 87px;
+				height: 87px;
+				margin: 20px 0 0 0;
+				background: url('../../images/hamb-open.png') center / cover no-repeat;
+				background-size: 30%;
+			}
+			button:hover {
+				box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.3);
+			}
+		}
+}
+
+.header__hamb.active {
+	button {
+		background: url('../../images/hamb-close.png') center / cover no-repeat;
+		background-size: 20%;
+	}
+}
+
+.header__menu-items {
+	display: none;
+	transition: 0.5s ease 0s;
+}
+
+.header__menu-items.active {
+	display: block;
+	transition: 0.5s ease 0s;
+
+}
+
+.menu__item {
+	@include flexbox();
+	justify-content: space-between;
+	align-items: center;
+	margin: 50px 0 0 0;
+	a {
+		padding: 0 30px 0 0;
+		font-size: 15px;
+		color: rgb(193, 193, 193);
+	}
+	a:hover {
+		color: #000;
+		transition: 0.5s ease 0s;
+	}
+}
+
+
+
+
+
+
+
+

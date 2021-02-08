@@ -1,0 +1,362 @@
+/*<МИКСИНЫ>======================================================================================================================================================================================================*/
+@import "mixins.scss";
+
+/*<Подключаем шрифты>==============================================================================================================================================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+/*<Шрифт по умолчанию>=================================================================================================================================================================================================*/
+$fontfamily: 'Lato', sans-serif;
+
+/*<ПЕРЕМЕННЫЕ>==================================================================================================================================================================================================================*/
+$color_1: #fff;
+$color_2: #000;
+
+
+/*<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>======================================================================================================================================================================================================*/
+@import "null.scss";
+
+/*<ОБОЛОЧКА>==================================================================================================================================================================================================================*/
+.wrapper{
+	overflow: hidden;
+	min-height: 100%;
+
+}
+
+/*<ОСНОВНАЯ СЕТКА>==================================================================================================================================================================================================================*/
+.container {
+	width: 1200px;
+	// padding: 0px 25px;
+	margin: 0px auto;
+}
+
+/*<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================*/
+@import "ui.scss";
+
+
+/*<ОСНОВНОЙ БЛОК>===========================================================================================================================================================================================================*/
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	@include flexbox();
+	flex-direction: column;
+}
+// .main-screen {
+// 	flex: 1 0 100%;
+// 	position: relative;
+// 	/* .main-screen__bg*/
+// 	&__bg {
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 100%;
+// 		top: 0;
+// 		left: 0;
+// 	}
+// }
+
+
+.header__row {
+	@include flexbox();
+	flex-direction: row;
+	
+}
+
+// Левый блок
+
+.header__left {
+	width: 10%;
+	height: 100vh;
+	background-color: #fff;
+	@include flexbox();
+	flex-direction: column;
+	align-items:center;
+		.left__header-logo {
+			margin: 20px 0 140px 0;
+		}
+}
+
+.left__header-icons {
+	@include flexbox();
+	flex-direction: column;
+		img {
+			margin: 0 0 40px 0;
+		}
+}
+
+// Главный блок
+
+.red-seat__main {
+	width: 90%;
+	height: 100%;
+	background-color: #ebebeb;
+}
+
+.red-seat__main-row {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.red-seat__content {
+	width: 90%;
+	@include flexbox();
+	flex-direction: row;
+}
+
+.red-seat__content-left {
+	width: 40%;
+	height: 100%;
+	background-color: rgba(255, 255, 255);
+	box-shadow: inset 5px 0px 25px rgba(0, 0, 0, 0.2);
+	@include flexbox();
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.red-seat__likes {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: flex-end;
+	margin: 0 30px 0 0;
+		img {
+			width: 17px;
+			height: 15px;
+			margin: 0 0 0 5px;
+		}
+}
+
+.red-seat__image {
+	margin: 0 auto;
+		img {
+			width: 293px;
+			height: 304px;
+		}
+}
+
+.bottom-row__scale {
+	margin: 0 0 0 40px;
+		.scale-up, .scale-down {
+			background-color: #fff;
+				img {
+					width: 20px;
+					height: 20px;
+				}
+		}
+		.scale-up {
+			width: 10px;
+			margin: 0 20px 0 0;
+		}
+		.scale-down {
+			opacity: 0.5;
+		}
+		.scale-down.active {
+			opacity: 1;
+		}
+}
+
+.red-seat__content-right {
+	width: 60%;
+	background-color: #ebebeb;
+}
+
+.red-seat__description {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.description__header {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 50px 0 0 0;
+		h1 {
+			font-size: 26px;
+		}
+		.red-seat__item {
+			@include flexbox();
+			align-items: center;
+			font-size: 12px;
+			color: rgb(193, 193, 193);
+				span {
+					margin: 0 20px 0 0;
+				}
+				img {
+					width: 28px;
+					height: 32px;
+				}
+		}
+}
+
+.red-seat__description-main {
+	@include flexbox();
+	flex-direction: column;
+}
+	
+
+.red-seat__description-h1 {
+	font-size: 36px;
+	margin: 100px 0 20px 0;
+		span {
+			color: rgb(0, 35, 255);
+		}
+}
+
+.red-seat__description-h2 {
+	color: rgb(193, 193, 193);
+	line-height: 1.5;
+}
+
+.red-seat__cost {
+	@include flexbox();
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 70px 0 0 0;
+}
+
+.red-seat__price {
+	@include flexbox();
+	flex-direction: row;
+	align-items: center;
+}
+
+.red-seat__price-inner {
+	.red-seat__cost-text {
+		margin: 0 0 10px 0;
+	}
+	.red-seat__price-1 {
+		font-size: 26px;
+		margin: 0 20px 0 0;
+		color: rgb(0, 35, 255);
+		font-weight: bold;
+	}
+	.red-seat__price-2 {
+		text-decoration: line-through;
+		font-weight: bold;
+
+	}
+}
+
+.red-seat__quantity {
+	.red-seat__quantity-text {
+		margin: 0 0 10px 0;
+	}
+	.red-seat__quantity-input {
+		@include flexbox();
+		flex-direction: row;
+		align-items: center;
+			input {
+				font-weight: bold;
+				text-align: center;
+				background-color: rgb(255, 255, 255);
+				width: 45px;
+				height: 34px;
+				border-radius: 50px;
+			}
+			.quantity__minus, .quantity__plus {
+				text-align: center;
+				font-weight: bold;
+				background-color: rgba(255, 255, 255);
+				width: 20px;
+				border-radius: 50px;
+				margin: 0 0 0 5px;
+				cursor: pointer;
+			}
+	}
+}
+
+.red-seat__butoon-add {
+	button {
+		background-color: rgb(0, 35, 255);
+		width: 215px;
+		height: 54px;
+		color: #fff;
+		border-radius: 50px;
+		font-weight: bold;
+	}
+	button:hover {
+		background-color: rgb(0, 35, 255);
+		box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.5);
+	}
+	
+}
+
+
+// Правый блок
+
+.header__right {
+	width: 15%;
+	height: 100vh;
+	transition: 0.5s ease 0s;
+}
+
+.header__right.active {
+	background-color: #fff;
+	transition: 0.5s ease 0s;
+}
+
+.header__menu {
+	margin: 0 auto;
+	width: 80%;
+	@include flexbox();
+	flex-direction: column;
+		.header__hamb {
+			margin: 0 auto;
+			button {
+				border-radius: 50%;
+				background-color: rgb(255, 255, 255);
+				box-shadow: 0px 0px 25px 0px rgba(219, 219, 219);
+				width: 87px;
+				height: 87px;
+				margin: 20px 0 0 0;
+				background: url('../../images/hamb-open.png') center / cover no-repeat;
+				background-size: 30%;
+			}
+			button:hover {
+				box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.3);
+			}
+		}
+}
+
+.header__hamb.active {
+	button {
+		background: url('../../images/hamb-close.png') center / cover no-repeat;
+		background-size: 20%;
+	}
+}
+
+.header__menu-items {
+	display: none;
+	transition: 0.5s ease 0s;
+}
+
+.header__menu-items.active {
+	display: block;
+	transition: 0.5s ease 0s;
+
+}
+
+.menu__item {
+	@include flexbox();
+	justify-content: space-between;
+	align-items: center;
+	margin: 50px 0 0 0;
+	a {
+		padding: 0 30px 0 0;
+		font-size: 15px;
+		color: rgb(193, 193, 193);
+	}
+	a:hover {
+		color: #000;
+		transition: 0.5s ease 0s;
+	}
+}
+
+
+
+
+
+
+
+

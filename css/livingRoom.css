@@ -1,0 +1,430 @@
+@charset "UTF-8";
+/*<МИКСИНЫ>======================================================================================================================================================================================================*/
+/*<Подключаем шрифты>==============================================================================================================================================================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+/*<Шрифт по умолчанию>=================================================================================================================================================================================================*/
+/*<ПЕРЕМЕННЫЕ>==================================================================================================================================================================================================================*/
+/*<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>======================================================================================================================================================================================================*/
+/*Обнуление*/
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  line-height: 1;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: "Lato", sans-serif;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/*--------------------*/
+/*<ОБОЛОЧКА>==================================================================================================================================================================================================================*/
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+/*<ОСНОВНАЯ СЕТКА>==================================================================================================================================================================================================================*/
+.container {
+  width: 1200px;
+  margin: 0px auto;
+}
+
+/*<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================*/
+.ibg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.ibg img {
+  display: none;
+}
+
+/*<ОСНОВНОЙ БЛОК>===========================================================================================================================================================================================================*/
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__row {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__left {
+  width: 10%;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__left .left__header-logo {
+  margin: 20px 0 140px 0;
+}
+
+.left__header-icons {
+  display: flex;
+  flex-direction: column;
+}
+.left__header-icons img {
+  margin: 0 0 40px 0;
+}
+
+.living-room__main {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  background-color: #ebebeb;
+}
+
+.living-room__main-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.living-room__content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.living-room__header {
+  height: 100px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.living-room__header h1 {
+  font-size: 52pt;
+}
+.living-room__header .living-room__item {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #c1c1c1;
+}
+.living-room__header .living-room__item span {
+  margin: 0 20px 0 0;
+}
+
+.living-room__content-inner, .living-room__content-inner-2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.content__inner-item-1 {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 0 10px;
+  background-color: white;
+  width: 25%;
+  height: 355px;
+  margin-right: 2%;
+}
+.content__inner-item-1 .item-1__img {
+  margin: 0 0 50px 0;
+}
+.content__inner-item-1 .item-1__text-h1 {
+  font-size: 30px;
+  margin: 0 0 10px 0;
+}
+.content__inner-item-1 .item-1__text-h2 {
+  font-size: 18px;
+  color: #a8a8a8;
+  margin: 0 0 10px 0;
+}
+.content__inner-item-1 .item-1__price {
+  font-size: 18px;
+  color: #0023ff;
+  font-weight: bold;
+}
+
+#view__det {
+  color: #fff;
+  font-weight: normal;
+  font-size: 15px;
+  margin: 0 0 0 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#view__det:hover {
+  color: #000;
+}
+
+.content__inner-item-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  width: 73%;
+  height: 355px;
+}
+.content__inner-item-2 .item-2__img img {
+  width: 400px;
+  height: 345px;
+}
+.content__inner-item-2 .item-2__content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 0 0;
+}
+.content__inner-item-2 .item-2__content .item-2__text-h1 {
+  font-size: 30px;
+  margin: 0 0 15px 0;
+}
+.content__inner-item-2 .item-2__content .item-2__text-h2 {
+  font-size: 18px;
+  color: #a8a8a8;
+}
+.content__inner-item-2 .item-2__content .item-2__price {
+  font-size: 18px;
+  color: #0023ff;
+  font-weight: bold;
+  margin: 40px 0 0 0;
+}
+
+.living-room__button {
+  text-align: center;
+  margin: 50px 0 0 0;
+}
+.living-room__button button {
+  color: #0023ff;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.living-room__content-inner-2 {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  display: none;
+}
+
+.living-room__content-inner-2.active {
+  display: flex;
+}
+
+.content__inner-item-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px 0 10px;
+  background-color: white;
+  width: 25%;
+  height: 355px;
+  margin-right: 2%;
+}
+.content__inner-item-3 .item-3__img {
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+.content__inner-item-3 .item-3__text-h1 {
+  font-size: 30px;
+  margin: 0 0 10px 0;
+}
+.content__inner-item-3 .item-3__text-h2 {
+  font-size: 18px;
+  color: #a8a8a8;
+  margin: 0 0 10px 0;
+}
+.content__inner-item-3 .item-3__price {
+  font-size: 18px;
+  color: #0023ff;
+  font-weight: bold;
+}
+
+.content__inner-item-4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: 46%;
+  height: 355px;
+  margin-right: 2%;
+}
+.content__inner-item-4 .item-4__img img {
+  width: 200px;
+  height: 175px;
+}
+.content__inner-item-4 .item-4__content {
+  display: flex;
+  flex-direction: column;
+}
+.content__inner-item-4 .item-4__content .item-4__text-h1 {
+  font-size: 26px;
+  margin: 0 0 15px 0;
+}
+.content__inner-item-4 .item-4__content .item-4__text-h2 {
+  font-size: 15px;
+  color: #a8a8a8;
+}
+.content__inner-item-4 .item-4__content .item-4__price {
+  font-size: 18px;
+  color: #0023ff;
+  font-weight: bold;
+  margin: 40px 0 0 0;
+}
+
+.content__inner-item-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px 0 10px;
+  background-color: white;
+  width: 25%;
+  height: 355px;
+}
+.content__inner-item-5 .item-5__img {
+  text-align: center;
+}
+.content__inner-item-5 .item-5__img img {
+  width: 201px;
+  height: 201px;
+}
+.content__inner-item-5 .item-5__text-h1 {
+  font-size: 30px;
+  margin: 0 0 10px 0;
+}
+.content__inner-item-5 .item-5__text-h2 {
+  font-size: 18px;
+  color: #a8a8a8;
+  margin: 0 0 10px 0;
+}
+.content__inner-item-5 .item-5__price {
+  font-size: 18px;
+  color: #0023ff;
+  font-weight: bold;
+}
+
+.header__right {
+  width: 15%;
+  height: 100vh;
+  transition: 0.5s ease 0s;
+}
+
+.header__right.active {
+  background-color: #fff;
+  transition: 0.5s ease 0s;
+}
+
+.header__menu {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.header__menu .header__hamb {
+  margin: 0 auto;
+}
+.header__menu .header__hamb button {
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 0px 25px 0px #dbdbdb;
+  width: 87px;
+  height: 87px;
+  margin: 20px 0 0 0;
+  background: url("../../images/hamb-open.png") center/cover no-repeat;
+  background-size: 30%;
+}
+.header__menu .header__hamb button:hover {
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.3);
+}
+
+.header__hamb.active button {
+  background: url("../../images/hamb-close.png") center/cover no-repeat;
+  background-size: 20%;
+}
+
+.header__menu-items {
+  display: none;
+  transition: 0.5s ease 0s;
+}
+
+.header__menu-items.active {
+  display: block;
+  transition: 0.5s ease 0s;
+}
+
+.menu__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0 0 0;
+}
+.menu__item a {
+  padding: 0 30px 0 0;
+  font-size: 15px;
+  color: #c1c1c1;
+}
+.menu__item a:hover {
+  color: #000;
+  transition: 0.5s ease 0s;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Olios Magazine</title>
+
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../css/darkSeat.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+</head>
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<div class="page__background">
+				<div class="header__row">
+					<div class="header__left">
+						<div class="left__header-logo">
+							<img src="../images/logo.png" alt="">
+						</div>
+						<div class="left__header-icons">
+							<a href="../index.html"><img src="../images/header-left-icon-1.png" alt=""></a>
+							<a href="#"><img src="../images/header-left-icon-2.png" alt=""></a>
+							<a href="search.html"><img src="../images/header-left-icon-3.png" alt=""></a>
+						</div>
+					</div>
+					<div class="red-seat__main">
+						<div class="red-seat__main-row">
+							<div class="red-seat__content">
+								<div class="red-seat__content-left">
+									<div class="red-seat__likes">
+										<span>352</span>
+										<img src="../images/likes.png" alt="">
+									</div>
+									<div class="red-seat__image">
+										<img src="../images/livroom-dark-seat.png" alt="" id="red-seat-big">
+									</div>
+									<div class="red-seat__bottom-row">
+										<div class="bottom-row__scale">
+											<button class="scale-up"><img src="../images/scale-up.png" alt="" id="scale-up-img"></button>
+											<button class="scale-down"><img src="../images/scale-down.png" alt="" id="scale-down-img" class="inactive"></button>
+										</div>
+									</div>
+								</div>
+								<div class="red-seat__content-right">
+									<div class="red-seat__description">
+										<div class="description__header">
+											<h1>PRODUCTS</h1>
+										</div>
+										<div class="red-seat__description-content">
+											<div class="red-seat__description-main">
+												<div class="red-seat__description-h1">
+													<span>DARK SEAT</span>
+												</div>
+												<div class="red-seat__description-h2">Thick and full high-elastic sponge seat bag, one-piece sponge is well-proportioned, ensuring long-term use without deformation.</div>
+											</div>
+										</div>
+										<div class="red-seat__cost-row">
+											<div class="red-seat__cost">
+												<div class="red-seat__price-inner">
+													<div class="red-seat__cost-text">COST</div>
+													<div class="red-seat__price">
+														<div class="red-seat__price-1">$50</div>
+														<div class="red-seat__price-2">&nbsp;&nbsp;$60&nbsp;&nbsp;</div>
+													</div>
+												</div>
+												<div class="red-seat__quantity">
+													<div class="red-seat__quantity-text">QUANTITY</div>
+													<div class="red-seat__quantity-input">
+														<input type="text" value="1" disabled="disabled">
+														<div class="quantity__minus">-</div>
+														<div class="quantity__plus">+</div>
+													</div>
+												</div>
+												<div class="red-seat__butoon-add">
+													<button>ADD TO CARD</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="header__right">
+								<div class="header__right-row">
+									<nav class="header__menu">
+										<div class="header__hamb"><button></button></div>
+										<div class="header__menu-items">
+											<div class="menu__item"><a href="livingRoom.html">LIVING ROOM</a><img src="../images/right-menu-icon-1.png" alt=""></div>
+											<div class="menu__item"><a href="office.html">OFFICE</a><img src="../images/right-menu-icon-2.png" alt=""></div>
+											<div class="menu__item"><a href="kids.html">FOR KIDS</a><img src="../images/right-menu-icon-3.png" alt=""></div>
+											<div class="menu__item"><a href="kitchen.html">KITCHEN</a><img src="../images/right-menu-icon-4.png" alt=""></div>
+											<div class="menu__item"><a href="accessories.html">ACCESORIES</a><img src="../images/right-menu-icon-5.png" alt=""></div>
+										</div>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</main>
+	</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/okzoom.js"></script>
+
+<script>
+    $(function(){
+        $('#red-seat-big').okzoom({
+            width: 293,
+            height: 304,
+            border: "1px solid black",
+            shadow: "0 0 5px #000"
+        });
+    });
+</script>
+
+</body>
+</html>
