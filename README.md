@@ -1,4 +1,4 @@
-# Магазин Olios на HTML, CSS и JavaScript (JQuery)
+# Магазин Olios на HTML, CSS (SCSS) и JavaScript (JQuery)
 # Главная страница магазина
 ![Иллюстрация к проекту](https://github.com/SvetlanaIL/Olios/raw/main/screenshots/index.png)
 # Страница продуктов
