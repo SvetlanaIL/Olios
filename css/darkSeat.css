@@ -356,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header__hamb.active button {
-  background: url("../../images/hamb-close.png") center/cover no-repeat;
+  background: url("../images/hamb-close.png") center/cover no-repeat;
   background-size: 20%;
 }
 
