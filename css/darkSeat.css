@@ -348,7 +348,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 87px;
   height: 87px;
   margin: 20px 0 0 0;
-  background: url("../../images/hamb-open.png") center/cover no-repeat;
+  background: url("../images/hamb-open.png") center/cover no-repeat;
   background-size: 30%;
 }
 .header__menu .header__hamb button:hover {
